@@ -30,4 +30,27 @@
         })
     })
 </script>--}}
+<style>
+    .img-fluid
+    {
+        height: 400px !important;
+    }
+    .trending-img
+    {
+        height: 100px;
+    }
+    .trending-item
+    {
+        float: left;
+        width: 16.5%;
+    }
+    .detail-img
+    {
+        height: 200px;
+    }
+    .search-box
+    {
+        width: 500px;
+    }
+</style>
 </html>
