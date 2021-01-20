@@ -30,17 +30,18 @@ if(Session::has('user'))
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Add To Cart{{$total}}</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Add To Cart{{$total}}</a></li>
             @if(Session::has('user'))
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{Session::get('user')['name']}}
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    {{Session::get('user')['name']}}
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
             </li>
             @else
-                <li><a href="//login">Login</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
             @endif
         </ul>
     </div>
