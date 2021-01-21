@@ -19,7 +19,7 @@ if(Session::has('user'))
                 <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Orders</a>
+                <a class="nav-link" href="/myorders">Orders</a>
             </li>
 
 
@@ -30,7 +30,7 @@ if(Session::has('user'))
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item"><a class="nav-link" href="#">Add To Cart{{$total}}</a></li>
+            <li class="nav-item"><a class="nav-link" href="/cartList">Add To Cart{{$total}}</a></li>
             @if(Session::has('user'))
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -42,6 +42,7 @@ if(Session::has('user'))
             </li>
             @else
                 <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="register" class="nav-link">Register</a></li>
             @endif
         </ul>
     </div>

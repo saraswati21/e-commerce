@@ -52,5 +52,11 @@
     {
         width: 500px;
     }
+    .cart-list-divider
+    {
+        border-bottom: 1px solid #cbd5e0;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
 </style>
 </html>

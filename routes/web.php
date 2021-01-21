@@ -20,8 +20,15 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 Route::view("login","login");
+Route::view("register","register");
 Route::post("/login",[UserController::class,'login']);
+Route::post("register",[UserController::class,'register']);
 Route::get("/",[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class,'detail']);
 Route::get("search",[ProductController::class,'search']);
 Route::post("add_to_cart",[ProductController::class,'addtocart']);
+Route::get("cartList",[ProductController::class,'cartlist']);
+Route::get("removecart/{id}",[ProductController::class,'removeCart']);
+Route::get("ordernow",[ProductController::class,'orderNow']);
+Route::post("orderplace",[ProductController::class,'orderplace']);
+Route::get("myorders",[ProductController::class,'myOrder']);
